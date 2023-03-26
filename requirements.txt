@@ -1,0 +1,4 @@
+streamlit
+plotly
+streamlit_pandas_profiling
+# baostock
