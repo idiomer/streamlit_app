@@ -4,7 +4,7 @@ import streamlit as st
 import plotly.express as px
 
 from utils.stock_util import Stock
-
+from config import stock_db_path
 
 # Config
 st.set_page_config(page_title='My Finance Playground', page_icon=':bar_chart:', layout='wide')
@@ -17,7 +17,7 @@ st.checkbox("""将未来N天的盈利天数占比做为标签预测""")
 
 # 1. 指数历史走势
 st.header('一、指数历史走势')
-stock = Stock('Z:/alipan/stock/stock.db')
+stock = Stock(stock_db_path)
 stock2name = {'sh.000300': '沪深300', 'sh.000905': '中证500'}
 for stock_code, stock_name in stock2name.items():
     base_df = stock.load_stock(stock_code)  # 从db或网络加载数据
