@@ -2,7 +2,8 @@ import time
 import datetime
 import streamlit as st
 
-st.title('🛠️Tools')
+title = '🛠️Tools'
+st.set_page_config(page_title=title, page_icon=':house_with_garden:', layout='wide', initial_sidebar_state='auto')
 
 
 def calculator(n=1):
