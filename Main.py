@@ -160,6 +160,7 @@ chatgpt_sites = {
     'OpenAI': 'https://chat.openai.com/chat',
     'YQCloud': 'https://chat9.yqcloud.top',
     'GITHUB收集': 'https://github.com/xx025/carrot',
+    'My': 'https://chatgpt-demo-blue.vercel.app/',
 }
 streamlit_sites = {
     'Streamlit API Reference': 'https://docs.streamlit.io/library/api-reference',
@@ -168,8 +169,13 @@ streamlit_sites = {
     'Streamlit Gallery': 'https://streamlit.io/gallery',
 }
 
+emoji_sites = {
+    "emoji pedia": "https://emojipedia.org/",
+    "get emoji": "https://getemoji.com/"
+}
+
 # Config
-st.set_page_config(page_title='My Data Playground', page_icon=':bar_chart:', layout='wide')
+st.set_page_config(page_title='My Data Playground', page_icon=':house_with_garden:', layout='wide', initial_sidebar_state='auto')
 
 # Title
 st.title('My Data Playground')
@@ -181,4 +187,5 @@ with c1:
 with c2:
     st.warning('**Streamlit**'+'\n'+dict2md(streamlit_sites), icon="💻")
 with c3:
-    st.error('**Data: [Flipside Crypto](https://flipsidecrypto.xyz)**', icon="🧠")
+    st.error('**Emoji**'+'\n'+dict2md(emoji_sites), icon="🧠")
+
