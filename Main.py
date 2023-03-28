@@ -159,7 +159,8 @@ def dict2md(one_dict):
 chatgpt_sites = {
     'OpenAI': 'https://chat.openai.com/chat',
     'YQCloud': 'https://chat9.yqcloud.top',
-    'GITHUB收集': 'https://github.com/xx025/carrot',
+    'Github Collection': 'https://github.com/xx025/carrot',
+    'Upgrade Plus': 'https://chatgpt-plus.github.io/chatgpt-plus/',
     'My': 'https://chatgpt-demo-blue.vercel.app/',
 }
 streamlit_sites = {
