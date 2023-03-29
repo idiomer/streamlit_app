@@ -148,6 +148,7 @@ import numpy as np
 import pandas as pd
 import streamlit as st
 import plotly.express as px
+from streamlit.components.v1 import html
 
 
 def dict2md(one_dict):
@@ -181,6 +182,10 @@ st.set_page_config(page_title='My Data Playground', page_icon=':house_with_garde
 # Title
 st.title('My Data Playground')
 
+# search box
+with open('html/search_page.html', encoding='utf-8') as fr:
+    html(fr.read())
+
 # Content
 c1, c2, c3 = st.columns(3, gap='small')
 with c1:
@@ -189,4 +194,5 @@ with c2:
     st.warning('**Streamlit**'+'\n'+dict2md(streamlit_sites), icon="💻")
 with c3:
     st.error('**Emoji**'+'\n'+dict2md(emoji_sites), icon="🧠")
+
 
